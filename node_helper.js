@@ -25,7 +25,6 @@ module.exports = NodeHelper.create({
 	},
 
 	async socketNotificationReceived (notification, payload) {
-		console.error(`Module ${this.name} @ Socket Notification @ NH: ${JSON.stringify(payload)}`);
 		if (notification === "GET_RANDOM_BROADCAST") {
 			const broadcast = await this.getRandomBroadcast(payload);
 			this.sendSocketNotification("GET_RANDOM_BROADCAST_RESPONSE", broadcast);
