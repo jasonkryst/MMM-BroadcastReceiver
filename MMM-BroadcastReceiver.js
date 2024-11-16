@@ -38,6 +38,7 @@ Module.register("MMM-BroadcastReceiver", {
 	},
 
 	socketNotificationReceived (notification, payload) {
+		console.error(`Module ${this.name} SNR: ${JSON.stringify(payload)}`);
 		if (notification === "GET_RANDOM_BROADCAST_RESPONSE") {
 			if (payload.length == 0) {
 				console.error(`Module ${this.name}: 0 broadcasts received.`);
