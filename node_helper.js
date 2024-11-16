@@ -9,7 +9,7 @@ module.exports = NodeHelper.create({
 		var url = config.apiUrl
 		try {
 			const response = await fetch(url, {
-				headers: { "Authentication":  config.apiKey }
+				headers: { "Authentication":  `${config.apiKey}` }
 			});
 			const data = await response.json();
 			if (data.length == 0) console.error(`Module ${this.name}: 0 quotes received.`);
