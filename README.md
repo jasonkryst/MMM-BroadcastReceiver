@@ -4,7 +4,7 @@ A module for the MagicMirror that displays random quote from various authorship 
 
 ## Installation
 
-Navigate into your MagicMirror's ~/MagicMirror/modules folder and execute git clone <https://github.com/Jacopo1891/MMM-RandomQuotes>
+Navigate into your MagicMirror's ~/MagicMirror/modules folder and execute git clone <https://github.com/Jacopo1891/MMM-BroadcastReceiver>
 
 ## Get API Ninjas's api key
 
@@ -18,7 +18,7 @@ To use this module, add it to the modules array in the config/config.js file:
 let config = {
     modules: [
         {
-            module: 'MMM-RandomQuotes',
+            module: 'MMM-BroadcastReceiver',
             position: 'bottom_center',
             config: {
                 apiKey: 'YOUR_KEY',

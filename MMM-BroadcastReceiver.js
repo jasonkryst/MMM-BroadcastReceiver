@@ -1,5 +1,5 @@
 var self;
-Module.register("MMM-RandomQuotes", {
+Module.register("MMM-BroadcastReceiver", {
 	// Module config defaults.
 	defaults: {
 		updateInterval: 60,
@@ -17,7 +17,7 @@ Module.register("MMM-RandomQuotes", {
 	},
 
 	getStyles () {
-		return ["MMM-RandomQuotes.css", "font-awesome.css"];
+		return ["MMM-BroadcastReceiver.css", "font-awesome.css"];
 	},
 
 	// Override start method.
