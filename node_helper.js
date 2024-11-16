@@ -26,8 +26,8 @@ module.exports = NodeHelper.create({
 
 	async socketNotificationReceived (notification, payload) {
 		if (notification === "GET_RANDOM_BROADCAST") {
-			const quote = await this.getRandomBroadcast(payload);
-			this.sendSocketNotification("GET_RANDOM_BROADCAST_RESPONSE", quote);
+			const broadcast = await this.getRandomBroadcast(payload);
+			this.sendSocketNotification("GET_RANDOM_BROADCAST_RESPONSE", broadcast);
 		}
 	}
 });
