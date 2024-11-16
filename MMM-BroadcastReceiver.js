@@ -50,7 +50,7 @@ Module.register("MMM-BroadcastReceiver", {
 				this.updateDom();
 			}
 			else{
-				Log.info(`Module ${this.name}: quote length is ${quoteDetail.quote.length} and exceed max lenght. Look for another.`);
+				Log.info(`Module ${this.name}: quote length is ${quoteDetail.quote.length} and exceed max length. Look for another.`);
 				this.downloadQuoteFromService();
 			}
 		}
@@ -91,7 +91,7 @@ Module.register("MMM-BroadcastReceiver", {
 
 		var quoteText = this.getRandomQuote();
 		var quoteLineSpan = document.createElement("span");
-		quoteLineSpan.innerHTML = quoteText.quote;
+		quoteLineSpan.innerHTML = quoteText.message;
 		quoteLineDiv.appendChild(quoteLineSpan);
 
 		if (this.config.showSymbol) {
