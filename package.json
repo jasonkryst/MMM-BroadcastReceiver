@@ -1,20 +1,21 @@
 {
-  "name": "mmm-randomquotes",
+  "name": "mmm-broadcastreceiver",
   "version": "1.0.0",
-  "description": "Module for MagicMirror² to display a random quote from various authorship using Ninjas API.",
-  "main": "MMM-RandomQuotes.js",
+  "description": "A module for the MagicMirror that displays messages from an API on the mirror.",
+  "main": "MMM-BroadcastReceiver.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jacopo1891/MMM-RandomQuotes.git"
+    "url": "git+https://github.com/jasonkryst/MMM-BroadcastReceiver"
   },
   "keywords": [
     "MagicMirror",
-    "quotes"
+    "messaging",
+    "broadcast receiver"
   ],
-  "author": "Jacopo1891",
+  "author": "JasonKryst",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jacopo1891/MMM-RandomQuotes/issues"
+    "url": "https://github.com/jasonkryst/MMM-BroadcastReceiver/issues"
   },
-  "homepage": "https://github.com/Jacopo1891/MMM-RandomQuotes#readme"
+  "homepage": "https://github.com/jasonkryst/MMM-BroadcastReceiver#readme"
 }
