@@ -50,7 +50,7 @@ Module.register("MMM-BroadcastReceiver", {
 				this.updateDom();
 			}
 			else{
-				Log.info(`Module ${this.name}: quote length is ${quoteDetail.quote.length} and exceed max length. Look for another.`);
+				Log.info(`Module ${this.name}: quote length is ${quoteDetail.message.length} and exceed max length. Look for another.`);
 				this.downloadQuoteFromService();
 			}
 		}
