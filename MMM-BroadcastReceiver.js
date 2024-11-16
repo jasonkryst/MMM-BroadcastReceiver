@@ -5,11 +5,11 @@ Module.register("MMM-BroadcastReceiver", {
 		updateInterval: 60,
 		showSymbol: true,
 		fadeSpeed: 4000,
-		category: "",
-		apiKey: "", // create on API Ninjas
-		quoteSize: "M", 	// S M L - Default M
+		apiUrl: "",
+		apiKey: "",
+		broadcastSize: "M", 	// S M L - Default M
 		authorSize: "S",	// S M L - Default S
-		maxQuoteLenght: 180	// Max number of quote's characters
+		maxBroadcastLength: 180	// Max number of quote's characters
 	},
 
 	getScripts () {
@@ -45,7 +45,7 @@ Module.register("MMM-BroadcastReceiver", {
 			}
 
 			var quoteDetail = { quote: payload[0].quote.replace("\n", "").replace(payload[0].author, ""), author: payload[0].author };
-			if(quoteDetail.quote.length <= this.config.maxQuoteLenght) {
+			if(quoteDetail.quote.length <= this.config.maxBroadcastLength) {
 				this.quotes.push(quoteDetail);
 				this.updateDom();
 			}
@@ -76,7 +76,7 @@ Module.register("MMM-BroadcastReceiver", {
 		const wrapper = document.createElement("div");
 
 		var quoteLineDiv = document.createElement("div");
-		var quoteFontSize = this.getFontSize(this.config.quoteSize);
+		var quoteFontSize = this.getFontSize(this.config.broadcastSize);
 		quoteLineDiv.className = `thin bright pre-line ${quoteFontSize}`;
 
 		var authorLineDiv = document.createElement("div");

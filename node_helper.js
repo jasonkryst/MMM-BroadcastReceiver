@@ -5,12 +5,11 @@ module.exports = NodeHelper.create({
 		console.log(`Starting node_helper for module: ${this.name}`);
 	},
 
-	async getRandomQuote (config) {
-		var category = config.category !== undefined && config.category !== "" ? `?category=${config.category}` : "";
-		var url = `https://api.api-ninjas.com/v1/quotes${category}`;
+	async getRandomQuote (config) {		
+		var url = config.apiUrl
 		try {
 			const response = await fetch(url, {
-				headers: { "X-Api-Key": config.apiKey }
+				headers: { "Authentication": `Basic ${config.apiKey}` }
 			});
 			const data = await response.json();
 			if (data.length == 0) console.error(`Module ${this.name}: 0 quotes received.`);

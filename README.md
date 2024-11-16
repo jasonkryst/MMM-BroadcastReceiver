@@ -26,9 +26,9 @@ let config = {
                 updateInterval: 60,
                 showSymbol: true,
                 fadeSpeed: 4000,
-                quoteSize: "M", // S M L - Default M
+                broadcastSize: "M", // S M L - Default M
                 authorSize: "S", // S M L - Default S
-                maxQuoteLenght: 180	// Max number of quote's characters
+                maxBroadcastLength: 180	// Max number of quote's characters
             },
         }
     ]
@@ -40,9 +40,9 @@ let config = {
 - `updateInterval`: Update interval in seconds. (default 1 minute)
 - `showSymbol`: true or false, show or hide apex symbol around quote.
 - `fadeSpeed`: How fast (in milliseconds) to fade out and back in when changing quotes.
-- `quoteSize`: Set the quote's font size (small, medium, large)
+- `broadcastSize`: Set the quote's font size (small, medium, large)
 - `authorSize`: Set the author's font size (small, medium, large)
-- `maxQuoteLenght`: Set the quote's max characters
+- `maxBroadcastLength`: Set the quote's max characters
 
 ## Example Screenshot
 
