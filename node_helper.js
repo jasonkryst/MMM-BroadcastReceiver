@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
 				console.error(`Module ${this.name}: 0 quotes received.`);
 			} 
 			else{
-				console.error(`Module ${this.name}: ${data.length} quotes received.`);
+				console.error(`Module ${this.name}: ${data.length} quotes received. Contents: ${data}.`);
 				return data;
 			}
 		} catch (error) {
