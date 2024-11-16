@@ -9,14 +9,14 @@ module.exports = NodeHelper.create({
 		var url = config.apiUrl
 		try {
 			const response = await fetch(url, {
-				headers: { "Authentication":  `${config.apiKey}` }
+				headers: { "Authorization":  `${config.apiKey}` }
 			});
 			const data = await response.json();
 			if (data.length == 0){
 				console.error(`Module ${this.name}: 0 quotes received.`);
 			} 
 			else{
-				console.error(`Module ${this.name}: ${data.length} quotes received. Contents: ${JSON.stringify(data)}.`);
+				//console.error(`Module ${this.name}: ${data.length} quotes received.`);
 				return data;
 			}
 		} catch (error) {
