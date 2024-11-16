@@ -12,8 +12,13 @@ module.exports = NodeHelper.create({
 				headers: { "Authentication":  `${config.apiKey}` }
 			});
 			const data = await response.json();
-			if (data.length == 0) console.error(`Module ${this.name}: 0 quotes received.`);
-			return data;
+			if (data.length == 0){
+				console.error(`Module ${this.name}: 0 quotes received.`);
+			} 
+			else{
+				console.error(`Module ${this.name}: ${data.length} quotes received.`);
+				return data;
+			}
 		} catch (error) {
 			console.error("Error fetching quote: ", error);
 			return null;
