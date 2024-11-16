@@ -46,6 +46,7 @@ Module.register("MMM-BroadcastReceiver", {
 
 			var quoteDetail = { message: payload[0].message.replace("\n", "").replace(payload[0].author, ""), author: payload[0].author };
 			if(quoteDetail.message.length <= this.config.maxBroadcastLength) {
+				console.error(`Module ${this.name}: ${quoteDetail}`)
 				this.quotes.push(quoteDetail);
 				this.updateDom();
 			}
